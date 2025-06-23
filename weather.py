@@ -1,12 +1,16 @@
 import sys
 import requests
 from dotenv import load_dotenv
+from datetime import datetime
 import os
 
 load_dotenv()
 
 API_KEY = os.getenv("WEATHER_API_KEY")
 URL = 'http://api.weatherapi.com/v1/current.json'
+
+today = datetime.today()
+date_str = today.strftime('%d/%m/%Y')
 
 
 def get_weather_data(location):
@@ -15,9 +19,7 @@ def get_weather_data(location):
         resp = requests.get(url, timeout=5)
         if resp.status_code != 200:
             print(
-                f"API error \
-                 {resp.status_code}: \
-                 {resp.json().get('error', {}).get(
+                f"API error {resp.status_code}: {resp.json().get('error', {}).get(
                      'message', 'Unknown error'
                      )}"
                 )
@@ -48,4 +50,4 @@ if __name__ == '__main__':
 
 location_name, temp_c = get_weather_data(city)
 
-print(f"Current temperature in {location_name}: {temp_c}°C")
+print(f"Today is {date_str}. Current temperature in {location_name}: {temp_c}°C")

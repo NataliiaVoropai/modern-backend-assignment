@@ -1,4 +1,4 @@
-Hello! My name is *Natalia Voropai*. I am looking forward to the start of the course. 
+Hello! My name is **Natalia Voropai**. I am looking forward to the start of the course. 
 Here's my suggestion of a small CLI weather tool. 
 
 Tool | Purpose

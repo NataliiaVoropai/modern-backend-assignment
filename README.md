@@ -29,6 +29,7 @@ Fork this repository **as a private repo** and implement the code in the `weathe
 Tool | Purpose
 --- | ---
 PyTest documentation | Checked how to run tests locally
-ChatGPT | Consulted to refresh 
+ChatGPT | Consulted to refresh some things
+www.weatherapi.com | Checked documentation for the endpoints and fields I need
 
 Good luck & have fun!
